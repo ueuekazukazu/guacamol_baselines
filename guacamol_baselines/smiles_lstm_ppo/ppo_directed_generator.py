@@ -4,7 +4,7 @@ import torch
 
 from .ppo_generator import PPOMoleculeGenerator
 from .rnn_model import SmilesRnnActorCritic
-from .rnn_utils import load_rnn_model
+from ..smiles_lstm_hc.rnn_utils import load_rnn_model
 from guacamol.scoring_function import ScoringFunction
 from guacamol.utils.chemistry import canonicalize_list
 from guacamol.goal_directed_generator import GoalDirectedGenerator

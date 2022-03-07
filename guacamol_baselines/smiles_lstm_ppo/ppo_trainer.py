@@ -8,13 +8,13 @@ import torch.optim as optim
 from functools import total_ordering
 from torch.utils.data.sampler import BatchSampler, SubsetRandomSampler
 
-from .action_sampler import ActionSampler
+from ..smiles_lstm_hc.action_sampler import ActionSampler
 from .action_replay import ActionReplay
 from .rnn_model import SmilesRnnActorCritic
 from guacamol.scoring_function import ScoringFunction
 from .molecule_batch import MoleculeBatch
 from .running_reward import RunningReward
-from .smiles_char_dict import SmilesCharDictionary
+from ..smiles_lstm_hc.smiles_char_dict import SmilesCharDictionary
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
