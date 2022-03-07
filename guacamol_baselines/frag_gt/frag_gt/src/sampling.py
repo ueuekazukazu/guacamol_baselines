@@ -7,7 +7,7 @@ from rdkit import DataStructs
 from rdkit.Chem import AllChem
 from typing import Optional, List, Callable, Tuple
 
-from frag_gt.src.afp import calculate_alignment_similarity_scores
+from .src.afp import calculate_alignment_similarity_scores
 
 logger = logging.getLogger(__name__)
 

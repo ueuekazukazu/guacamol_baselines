@@ -13,7 +13,7 @@ from guacamol.scoring_function import ScoringFunction
 from guacamol.utils.helpers import setup_default_logger
 from typing import Optional, List
 
-from frag_gt.frag_gt import FragGTGenerator
+from .frag_gt import FragGTGenerator
 
 logger = logging.getLogger(__name__)
 setup_default_logger()

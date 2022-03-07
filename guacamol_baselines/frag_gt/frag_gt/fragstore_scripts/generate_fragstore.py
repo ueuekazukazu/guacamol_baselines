@@ -5,10 +5,10 @@ from rdkit import Chem
 from tqdm import tqdm
 from typing import List, Optional
 
-from frag_gt.src.fragmentors import fragmentor_factory, FragmentorBase
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.src.gene_type_utils import get_gene_type, get_haplotype_from_gene_frag
-from frag_gt.src.io import valid_mols_from_smiles, load_smiles_from_file
+from .src.fragmentors import fragmentor_factory, FragmentorBase
+from .src.fragstore import fragstore_factory
+from .src.gene_type_utils import get_gene_type, get_haplotype_from_gene_frag
+from .src.io import valid_mols_from_smiles, load_smiles_from_file
 
 
 class FragmentStoreCreator:

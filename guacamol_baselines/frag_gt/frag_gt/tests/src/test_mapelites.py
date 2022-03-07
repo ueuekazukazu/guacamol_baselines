@@ -1,8 +1,8 @@
-from frag_gt.src.io import load_smiles_from_file, valid_mols_from_smiles
-from frag_gt.src.mapelites import MWLogPMapElites, SpeciesMapElites
-from frag_gt.src.population import Molecule
-from frag_gt.src.scorers import MolecularWeightScorer
-from frag_gt.tests.utils import SAMPLE_SMILES_FILE
+from .src.io import load_smiles_from_file, valid_mols_from_smiles
+from .src.mapelites import MWLogPMapElites, SpeciesMapElites
+from .src.population import Molecule
+from .src.scorers import MolecularWeightScorer
+from .tests.utils import SAMPLE_SMILES_FILE
 
 
 def test_mapelites_species():

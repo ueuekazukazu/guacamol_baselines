@@ -2,9 +2,9 @@ import os
 
 from rdkit import Chem
 
-from frag_gt.fragstore_scripts.generate_fragstore import FragmentStoreCreator
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.tests.utils import SAMPLE_SMILES_FILE
+from .fragstore_scripts.generate_fragstore import FragmentStoreCreator
+from .src.fragstore import fragstore_factory
+from .tests.utils import SAMPLE_SMILES_FILE
 
 
 def test_create_gene_table(tmp_path):

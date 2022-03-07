@@ -1,5 +1,5 @@
 import numpy as np
-from frag_gt.src.afp import compare_alignment_fps, create_alignment_fp, renumber_frag_attachment_idxs, \
+from .src.afp import compare_alignment_fps, create_alignment_fp, renumber_frag_attachment_idxs, \
     match_fragment_attachment_points, calculate_alignment_similarity_scores
 from rdkit import Chem
 

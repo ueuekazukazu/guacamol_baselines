@@ -1,8 +1,8 @@
 from rdkit import Chem
 
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.src.query_builder import FragQueryBuilder
-from frag_gt.tests.utils import SAMPLE_FRAGSTORE_PATH
+from .src.fragstore import fragstore_factory
+from .src.query_builder import FragQueryBuilder
+from .tests.utils import SAMPLE_FRAGSTORE_PATH
 
 FRAGSTORE_DB = fragstore_factory("in_memory", SAMPLE_FRAGSTORE_PATH)
 

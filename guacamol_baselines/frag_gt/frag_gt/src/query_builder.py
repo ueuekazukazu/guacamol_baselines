@@ -3,8 +3,8 @@ import logging
 from rdkit import Chem
 from typing import Optional, List, Tuple
 
-from frag_gt.src.fragstore import FragStoreBase
-from frag_gt.src.sampling import FragSampler
+from .src.fragstore import FragStoreBase
+from .src.sampling import FragSampler
 
 logger = logging.getLogger(__name__)
 

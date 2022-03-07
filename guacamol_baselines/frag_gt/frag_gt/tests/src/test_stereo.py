@@ -1,4 +1,4 @@
-from frag_gt.src.stereo import mol_contains_unspecified_stereo, enumerate_unspecified_stereocenters
+from .src.stereo import mol_contains_unspecified_stereo, enumerate_unspecified_stereocenters
 from rdkit import Chem
 
 m_specified = Chem.MolFromSmiles('c1ccccc1[C@@](Cl)(CC)(Br)')

@@ -1,5 +1,5 @@
-from frag_gt.src.io import load_smiles_from_file, valid_mols_from_smiles
-from frag_gt.tests.utils import SAMPLE_SMILES_FILE
+from .src.io import load_smiles_from_file, valid_mols_from_smiles
+from .tests.utils import SAMPLE_SMILES_FILE
 
 
 def test_load_smiles_from_file():

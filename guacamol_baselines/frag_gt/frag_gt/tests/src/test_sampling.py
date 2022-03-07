@@ -1,4 +1,4 @@
-from frag_gt.src.sampling import FragSampler
+from .src.sampling import FragSampler
 from rdkit import Chem
 
 

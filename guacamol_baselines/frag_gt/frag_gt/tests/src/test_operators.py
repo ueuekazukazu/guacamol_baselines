@@ -1,12 +1,12 @@
 import random
 
 import numpy as np
-from frag_gt.src.fragmentors import fragmentor_factory
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.src.operators import substitute_node_mutation, add_node_mutation, delete_node_mutation, \
+from .src.fragmentors import fragmentor_factory
+from .src.fragstore import fragstore_factory
+from .src.operators import substitute_node_mutation, add_node_mutation, delete_node_mutation, \
     single_point_crossover, connect_mol_from_frags
-from frag_gt.src.query_builder import FragQueryBuilder
-from frag_gt.tests.utils import SAMPLE_FRAGSTORE_PATH
+from .src.query_builder import FragQueryBuilder
+from .tests.utils import SAMPLE_FRAGSTORE_PATH
 from rdkit import Chem
 
 # seed random functions as operators have stochastic behaviour

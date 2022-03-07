@@ -2,7 +2,7 @@ import argparse
 
 from copy import deepcopy
 
-from frag_gt.src.fragstore import MemoryFragStore, fragstore_factory
+from .src.fragstore import MemoryFragStore, fragstore_factory
 
 
 def filter_fragstore(old_fragstore, count_limit=1):

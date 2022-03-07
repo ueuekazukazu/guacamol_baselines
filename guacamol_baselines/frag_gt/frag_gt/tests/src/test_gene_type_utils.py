@@ -1,4 +1,4 @@
-from frag_gt.src.gene_type_utils import get_species, get_gene_type, get_haplotype_from_gene_frag
+from .src.gene_type_utils import get_species, get_gene_type, get_haplotype_from_gene_frag
 from rdkit import Chem
 
 

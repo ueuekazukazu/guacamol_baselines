@@ -17,20 +17,11 @@ lg.setLevel(rdkit.RDLogger.CRITICAL)
 def get_parser():
     parser = add_train_args(organ_parser())
 
-    parser.add_argument(
-        "--n_ref_subsample",
-        type=int,
-        default=500,
-        help="Number of reference molecules (sampling from training data)",
-    )
-    parser.add_argument(
-        "--addition_rewards",
-        nargs="+",
-        type=str,
-        choices=MetricsReward.supported_metrics,
-        default=[],
-        help="Adding of addition rewards",
-    )
+    parser.add_argument('--n_ref_subsample', type=int, default=500,
+                        help='Number of reference molecules (sampling from training data)')
+    parser.add_argument('--addition_rewards', nargs='+', type=str,
+                        choices=MetricsReward.supported_metrics, default=[],
+                        help='Adding of addition rewards')
 
     return parser
 
@@ -43,13 +34,7 @@ def main(config):
     device = torch.device(config.device)
 
     with Pool(config.n_jobs) as pool:
-        reward_func = MetricsReward(
-            train,
-            config.n_ref_subsample,
-            config.rollouts,
-            pool,
-            config.addition_rewards,
-        )
+        reward_func = MetricsReward(train, config.n_ref_subsample, config.rollouts, pool, config.addition_rewards)
         model = ORGAN(vocab, config, reward_func)
         model = model.to(device)
 
@@ -61,7 +46,7 @@ def main(config):
     torch.save(vocab, config.vocab_save)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     parser = get_parser()
     config = parser.parse_known_args()[0]
     main(config)

@@ -35,8 +35,8 @@ rm frag_gt.zip
 Given an objective scoring function, FragGT can generate molecules with just a few lines of code!
 
 ```python
-from frag_gt.frag_gt import FragGTGenerator
-from frag_gt.src.scorers import MolecularWeightScorer
+from .frag_gt import FragGTGenerator
+from .src.scorers import MolecularWeightScorer
 
 # lightweight generator for prototyping (else just use defaults: `generator = FragGTGenerator()`)
 generator = FragGTGenerator(generations=5,
@@ -63,7 +63,7 @@ An additional custom scorer that can be used optimize molecules towards high cLo
 ```python
 from rdkit import Chem
 from rdkit.Chem.Crippen import MolLogP
-from frag_gt.src.scorers import SmilesScorer
+from .src.scorers import SmilesScorer
 
 
 class MyCustomScorer(SmilesScorer):

@@ -1,4 +1,4 @@
-from frag_gt.src.scorers import MolecularWeightScorer
+from .src.scorers import MolecularWeightScorer
 
 
 def test_molecular_weight_scorer():

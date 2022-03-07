@@ -5,11 +5,11 @@ import numpy as np
 from rdkit import Chem
 from typing import List, Optional, Tuple
 
-from frag_gt.src.fragmentors import fragmentor_factory
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.src.operators import operator_factory
-from frag_gt.src.query_builder import FragQueryBuilder
-from frag_gt.src.stereo import enumerate_unspecified_stereocenters
+from .src.fragmentors import fragmentor_factory
+from .src.fragstore import fragstore_factory
+from .src.operators import operator_factory
+from .src.query_builder import FragQueryBuilder
+from .src.stereo import enumerate_unspecified_stereocenters
 
 logger = logging.getLogger(__name__)
 Molecule = namedtuple("Molecule", ["score", "mol"])

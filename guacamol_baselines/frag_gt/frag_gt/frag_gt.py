@@ -7,10 +7,10 @@ import pandas as pd
 from rdkit import Chem
 from typing import List, Optional, Set, Tuple
 
-from frag_gt.src.io import load_smiles_from_file, valid_mols_from_smiles
-from frag_gt.src.mapelites import map_elites_factory
-from frag_gt.src.population import MolecularPopulationGenerator, Molecule
-from frag_gt.src.scorers import SmilesScorer
+from .src.io import load_smiles_from_file, valid_mols_from_smiles
+from .src.mapelites import map_elites_factory
+from .src.population import MolecularPopulationGenerator, Molecule
+from .src.scorers import SmilesScorer
 
 logger = logging.getLogger(__name__)
 

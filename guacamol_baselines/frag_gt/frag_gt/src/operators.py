@@ -7,10 +7,10 @@ from rdkit.Chem import AllChem
 from rdkit.Chem.BRICS import BreakBRICSBonds
 from typing import Dict, List, Tuple
 
-from frag_gt.src.afp import renumber_frag_attachment_idxs, match_fragment_attachment_points
-from frag_gt.src.fragmentors import FragmentorBase
-from frag_gt.src.gene_type_utils import get_gene_type, get_haplotype_from_gene_frag
-from frag_gt.src.query_builder import FragQueryBuilder
+from .src.afp import renumber_frag_attachment_idxs, match_fragment_attachment_points
+from .src.fragmentors import FragmentorBase
+from .src.gene_type_utils import get_gene_type, get_haplotype_from_gene_frag
+from .src.query_builder import FragQueryBuilder
 
 logger = logging.getLogger(__name__)
 

@@ -1,4 +1,4 @@
-from frag_gt.src.fragmentors import fragmentor_factory
+from .src.fragmentors import fragmentor_factory
 from rdkit import Chem
 
 

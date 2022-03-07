@@ -1,6 +1,6 @@
-from frag_gt.fragstore_scripts.filter_fragstore import filter_fragstore
-from frag_gt.src.fragstore import fragstore_factory
-from frag_gt.tests.utils import SAMPLE_FRAGSTORE_PATH
+from .fragstore_scripts.filter_fragstore import filter_fragstore
+from .src.fragstore import fragstore_factory
+from .tests.utils import SAMPLE_FRAGSTORE_PATH
 
 SAMPLE_FRAGSTORE = fragstore_factory("in_memory", SAMPLE_FRAGSTORE_PATH)
 SAMPLE_FRAGSTORE.load()

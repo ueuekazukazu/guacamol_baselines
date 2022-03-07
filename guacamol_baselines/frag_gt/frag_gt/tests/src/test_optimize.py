@@ -4,10 +4,10 @@ import random
 import numpy as np
 from rdkit import Chem
 
-from frag_gt.frag_gt import FragGTGenerator
-from frag_gt.src.population import Molecule
-from frag_gt.src.scorers import MolecularWeightScorer
-from frag_gt.tests.utils import SAMPLE_SMILES_FILE, SAMPLE_FRAGSTORE_PATH
+from .frag_gt import FragGTGenerator
+from .src.population import Molecule
+from .src.scorers import MolecularWeightScorer
+from .tests.utils import SAMPLE_SMILES_FILE, SAMPLE_FRAGSTORE_PATH
 
 np.random.seed(1337)
 random.seed(1337)

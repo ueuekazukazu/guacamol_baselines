@@ -3,9 +3,9 @@ from abc import ABC, abstractmethod
 from rdkit.Chem import Descriptors
 from typing import List, Tuple, Union, Dict
 
-from frag_gt.src.fragmentors import fragmentor_factory
-from frag_gt.src.gene_type_utils import get_species
-from frag_gt.src.population import Molecule
+from .src.fragmentors import fragmentor_factory
+from .src.gene_type_utils import get_species
+from .src.population import Molecule
 
 
 class MapElites(ABC):
