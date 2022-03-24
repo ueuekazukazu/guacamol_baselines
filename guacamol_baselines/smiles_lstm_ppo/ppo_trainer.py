@@ -57,7 +57,7 @@ class PPOTrainer(object):
     """
 
     def __init__(self, model: SmilesRnnActorCritic, optimization_objective: ScoringFunction, max_seq_length, device,
-                 num_epochs, clip_param, batch_size, episode_size, output_dir, entropy_weight=1.0, kl_div_weight=5.0) -> None:
+                 num_epochs, clip_param, batch_size, episode_size, output_dir=None, entropy_weight=1.0, kl_div_weight=5.0) -> None:
         self.model = model
         self.prior = copy.deepcopy(model).to(device)
         self.output_dir = output_dir
@@ -131,7 +131,8 @@ class PPOTrainer(object):
 
             self.optimizer.step()
 
-        self._save_model(self.model, self.output_dir, 'model_' + epoch)
+        if self.output_dir is not None:
+            self._save_model(self.model, self.output_dir, 'model_' + epoch)
         self._print_stats(epoch=epoch, smiles=smiles)
 
     def _save_model(self, model, base_dir, base_name):
