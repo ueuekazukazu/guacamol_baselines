@@ -4,6 +4,7 @@ import numpy as np
 import logging
 import torch
 import copy
+import os
 import torch.optim as optim
 from functools import total_ordering
 from torch.utils.data.sampler import BatchSampler, SubsetRandomSampler
@@ -56,9 +57,10 @@ class PPOTrainer(object):
     """
 
     def __init__(self, model: SmilesRnnActorCritic, optimization_objective: ScoringFunction, max_seq_length, device,
-                 num_epochs, clip_param, batch_size, episode_size, entropy_weight=1.0, kl_div_weight=5.0) -> None:
+                 num_epochs, clip_param, batch_size, episode_size, output_dir, entropy_weight=1.0, kl_div_weight=5.0) -> None:
         self.model = model
         self.prior = copy.deepcopy(model).to(device)
+        self.output_dir = output_dir
         self.optimization_objective = optimization_objective
         self.num_epochs = num_epochs
         self.batch_size = batch_size
@@ -129,7 +131,11 @@ class PPOTrainer(object):
 
             self.optimizer.step()
 
+        self._save_model(self.model, self.output_dir, 'model_' + epoch)
         self._print_stats(epoch=epoch, smiles=smiles)
+
+    def _save_model(self, model, base_dir, base_name):
+        torch.save(model.state_dict(), os.path.join(base_dir, base_name + '.pt'))
 
     def sample_and_process_episode(self):
         """
