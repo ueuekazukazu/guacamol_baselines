@@ -132,7 +132,7 @@ class PPOTrainer(object):
             self.optimizer.step()
 
         if self.output_dir is not None:
-            self._save_model(self.model, self.output_dir, 'model_' + epoch)
+            self._save_model(self.model, self.output_dir, 'model_' + str(epoch))
         self._print_stats(epoch=epoch, smiles=smiles)
 
     def _save_model(self, model, base_dir, base_name):
