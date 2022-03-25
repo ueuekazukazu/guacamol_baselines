@@ -52,7 +52,10 @@ class MoleculeBatch(object):
 
     @property
     def ratio_unique_among_valid(self):
-        return self.number_unique / self.number_valid
+        try:
+            return self.number_unique / self.number_valid
+        except ZeroDivisionError:
+            return 0.0
 
     def _canonicalize(self):
         if self._canonical_smiles is not None:
