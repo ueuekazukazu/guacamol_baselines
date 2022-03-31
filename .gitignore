@@ -143,3 +143,6 @@ dmypy.json
 .idea/
 
 condaenv.*
+
+# custom
+.DS_Store
