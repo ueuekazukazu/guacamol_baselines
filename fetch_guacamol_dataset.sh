@@ -6,10 +6,10 @@ cd $build_directory
 
 # checking if wget is installed
 if which wget >/dev/null; then
-    wget https://ndownloader.figshare.com/files/13612745 -O guacamol_v1_all.smiles
-    wget https://ndownloader.figshare.com/files/13612760 -O guacamol_v1_train.smiles
-    wget https://ndownloader.figshare.com/files/13612766 -O guacamol_v1_valid.smiles
-    wget https://ndownloader.figshare.com/files/13612757 -O guacamol_v1_test.smiles
+    wget https://ndownloader.figshare.com/files/13612745 -O guacamol_v1_all.smiles --no-check-certificate
+    wget https://ndownloader.figshare.com/files/13612760 -O guacamol_v1_train.smiles --no-check-certificate
+    wget https://ndownloader.figshare.com/files/13612766 -O guacamol_v1_valid.smiles --no-check-certificate
+    wget https://ndownloader.figshare.com/files/13612757 -O guacamol_v1_test.smiles --no-check-certificate
 
 # if wget is not found then use curl to download guacamol smiles
 else
