@@ -11,4 +11,4 @@ flake8==3.5.0
 tensorflow
 keras
 h5py
-moses @ git+https://github.com/GT4SD/moses.git@v0.1.0
+moses @ git+https://github.com/GT4SD/moses.git@v0.1.1

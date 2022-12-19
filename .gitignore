@@ -145,4 +145,4 @@ dmypy.json
 condaenv.*
 
 # custom
-.DS_Store
+*.DS_Store
