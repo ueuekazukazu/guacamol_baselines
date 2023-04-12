@@ -1,4 +1,4 @@
 # To do - force imports
 
-__version__ = "0.5.3"
+__version__ = "0.0.4"
 __name__ = "guacamol_baselines"
